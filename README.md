@@ -3,19 +3,14 @@ Rešitve Advent of Code 2020 v OCaml-u
 
 ## Nastavitev razvijalskega okolja
 
-Repository uporabla VSCode Docker container za delovanje.
+Repository uporabla VSCode Docker container za delovanje, zato mora Docker biti zagnan v ozadju vedno, ko urejamo kodo.
 
-> Spodnja navodila so prekopirana iz učilnice.
+1. Namesti Docker na svoj računalnik. [link](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
+2. Namesti VSCode extension [link](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
+3. Za uporabo odpri projekt v VSCode in zaženite ukaz (ctrl + shift + P) Remote-Containers: Rebuild and Reopen in Container.
 
-Namesto da si Python in Ocaml namestite direktno na računalnik lahko uporabite docker kontainerje, ki poskrbijo, da so namestitve ločene. Slaba stran te namestitve je dejstvo, da (trenutno) porabi nekoliko več prostora na disku (prostor, ki ga potrebuje docker + 4.5 GB)
+> Prvi zagon traja nekaj časa, saj mora naložiti celotno sliko, vsi naslednji zagoni pa so hitri.
 
-Pri namestitvi sledite navodilom iz https://code.visualstudio.com/docs/remote/containers, kamor se lahko obrnete, če pride do kakšnih napak.
+## Pogosta vprašanja
 
-Namestite si docker za vaš operacijski sistem: https://docs.docker.com/get-docker/ in ga nastavite. Za sistem Windows si morate dodatno namestiti tudi WSL (https://docs.microsoft.com/sl-si/windows/wsl/wsl2-kernel), na kar vas ob prvem zagonu opozori tudi docker.
-V VSC si namestite razširitev Remote - Containers.
-Uredite si git v remote kontainerju https://code.visualstudio.com/docs/remote/containers#_working-with-git.
-Za uporabo klonirajte repozitorij predmeta in zaženite ukaz (ctrl + shift + P) Remote-Containers: Rebuild and Reopen in Container.
-
-Prvi zagon traja nekaj časa, saj mora naložiti celotno sliko, vsi naslednji zagoni pa so hitri.
-
-Ko se projekt odpre, lahko normalno uporabljate taske, ki so na voljo na repozitoriju predmeta.
+Če kaj ni jasno naredi issue v tem repozitoriju.
