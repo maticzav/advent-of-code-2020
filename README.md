@@ -9,28 +9,29 @@ Pri reševanju uporabljam še knjižnico Base https://opensource.janestreet.com/
 ## Template
 
 ```ocaml
+open Base
+open Stdio
+
 (* Nastavitve *)
 
 let dan_naloge = "1"
 
 (* Naloge *)
 
-let naloga1 vsebina_datoteke = "10"
+let naloga1 (vsebina : string list) : string =
+  "42"
 
-let naloga2 vsebina_datoteke = string_of_int (String.length vsebina_datoteke)
+let naloga2 (vsebina : string list) : string =
+  "92"
 
 (* Pomožne funkcije *)
 
-let preberi_datoteko ime_datoteke =
-  let chan = open_in ime_datoteke in
-  let vsebina = really_input_string chan (in_channel_length chan) in
-  close_in chan;
+let preberi_datoteko (ime_datoteke : string) : string list =
+  let vsebina = In_channel.read_lines ime_datoteke in
   vsebina
 
-let izpisi_datoteko ime_datoteke vsebina =
-  let chan = open_out ime_datoteke in
-  output_string chan vsebina;
-  close_out chan
+let izpisi_datoteko (ime_datoteke : string) (vsebina : string) =
+  Out_channel.write_all ime_datoteke ~data:vsebina
 
 let ime_vhodne_datoteke dan = "day_" ^ dan ^ ".in"
 
