@@ -1,3 +1,5 @@
+open Base
+
 (* Nastavitve *)
 
 let dan_naloge = "1"
