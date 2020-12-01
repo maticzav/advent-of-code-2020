@@ -3,3 +3,6 @@
 *.log*
 day_*.in
 day_*.out
+
+*.out
+*.cmi

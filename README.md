@@ -4,6 +4,8 @@ Rešitve Advent of Code 2020 v OCaml-u
 
 Pri reševanju uporabljam še knjižnico Base https://opensource.janestreet.com/base/.
 
+- https://adambard.com/blog/getting-started-with-ocaml/
+
 ## Template
 
 ```ocaml

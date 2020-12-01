@@ -45,6 +45,9 @@ ENV MANPATH="$MANPATH"':/home/opam/.opam/'${OCAML_VERSION}'/man'
 ENV OCAML_DOCKER_PATH='/home/opam/.opam/'${OCAML_VERSION}'/bin'
 ENV PATH="$OCAML_DOCKER_PATH:$PATH"
 
+# Enables discovery of .ocamlinit in the root of our project.
+ENV OCAML_INCLUDE_PATH="/workspaces/advent-of-code-2020:$PATH"
+
 # This enables us to install additional python libraries
 USER root
 # Expose jupyter port

@@ -6,9 +6,42 @@ let dan_naloge = "1"
 
 (* Naloge *)
 
-let naloga1 vsebina_datoteke = "10"
+let naloga1 (vsebina_datoteke : string) : string =
+  (* Data *)
+  let lines = String.split vsebina_datoteke '\n' in
+  let numbers : int list = List.map lines Int.of_string in
+  (* Helper functions *)
+  let sum_and_product ((n1, n2) : int * int) : int * int = (n1 + n2, n1 * n2) in
+  let is_2020 (tuple : int * int) : bool =
+    match tuple with 2020, _ -> true | _ -> false
+  in
+  (* Calculation *)
+  let result =
+    List.cartesian_product numbers numbers
+    |> List.map ~f:sum_and_product
+    |> List.find ~f:is_2020
+  in
+  match result with
+  | Some (_, prod) -> Int.to_string prod
+  | _ -> "Something unexpected."
 
-let naloga2 vsebina_datoteke = string_of_int (String.length vsebina_datoteke)
+let naloga2 (vsebina_datoteke : string) : string =
+  (* Data *)
+  let lines = String.split vsebina_datoteke '\n' in
+  let numbers : int list = List.map lines Int.of_string in
+  (* Helper functions *)
+  let sum_and_product (n1, (n2, n3)) = (n1 + n2 + n3, n1 * n2 * n3) in
+  let is_2020 tuple = match tuple with 2020, _ -> true | _ -> false in
+  (* Calculation *)
+  let result =
+    List.cartesian_product numbers numbers
+    |> List.cartesian_product numbers
+    |> List.map ~f:sum_and_product
+    |> List.find ~f:is_2020
+  in
+  match result with
+  | Some (sum, prod) -> Int.to_string prod ^ "-" ^ Int.to_string sum
+  | _ -> "Something unexpected."
 
 (* Pomožne funkcije *)
 
