@@ -18,7 +18,7 @@ RUN opam update && opam install ocaml-lsp-server ocamlformat utop
 # Install environment tools
 RUN opam install dune
 # Install libraries
-RUN opam install base stdio
+RUN opam install base stdio tyre
 RUN opam user-setup install
 
 # Get the correct ocaml

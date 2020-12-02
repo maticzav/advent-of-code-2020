@@ -1,2 +1,4 @@
 PKG base
 PKG stdio
+PKG tyre
+PKG ocaml-re
