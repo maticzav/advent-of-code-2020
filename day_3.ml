@@ -1,6 +1,5 @@
 open Base
 open Stdio
-open Tyre.Infix
 
 (* Nastavitve *)
 
